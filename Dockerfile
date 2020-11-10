@@ -1,11 +1,11 @@
 FROM ubuntu:18.04
 
 # Variable Definition
-ENV ANSIBLE_VERSION "2.10.0"
+ENV ANSIBLE_VERSION "2.10.3"
 
 RUN  apt-get -y update && \
  apt-get -y dist-upgrade && \
- apt-get -y --force-yes install \
+ apt-get -y install \
   apt-utils \
   build-essential \
   ca-certificates \
@@ -18,9 +18,12 @@ RUN  apt-get -y update && \
   python3-pip \
   sshpass 
 
+COPY ./requirements.txt /requirements.txt
+
 RUN pip3 install -q --upgrade pip
 RUN pip3 install --upgrade setuptools
 RUN pip3 install -q ansible==$ANSIBLE_VERSION
+RUN pip3 install -r requirements.txt
 
 # Cleanup
 RUN apt-get clean && \
