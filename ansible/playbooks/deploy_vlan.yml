@@ -4,7 +4,6 @@
   gather_facts: no
 
   tasks:
-
     - name: EOS commands
       arista.eos.eos_config:
         lines:

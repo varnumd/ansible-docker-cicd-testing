@@ -4,11 +4,11 @@
   gather_facts: no
 
   tasks:
-#    - name: Gather IOS Facts
-#      ios_facts:
-#      register: facts
-#  #  - debug: var=vars
-#    - debug: var=facts
+    - name: Gather IOS Facts
+      ios_facts:
+      register: facts
+  #  - debug: var=vars
+    - debug: var=facts
 #
 #    - name: Gather EOS Facts
 #      arista.eos.eos_facts:
