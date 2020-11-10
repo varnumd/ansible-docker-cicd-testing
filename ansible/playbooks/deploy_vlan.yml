@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: EOS commands
+      arista.eos.eos_config:
+        lines:
+          - vlan 99
+          - name Ansible-Test

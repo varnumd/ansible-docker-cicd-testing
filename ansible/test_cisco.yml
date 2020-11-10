@@ -1,0 +1,28 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+#    - name: Gather IOS Facts
+#      ios_facts:
+#      register: facts
+#  #  - debug: var=vars
+#    - debug: var=facts
+#
+#    - name: Gather EOS Facts
+#      arista.eos.eos_facts:
+#      register: facts
+#  #  - debug: var=vars
+#    - debug: var=facts
+
+#    - name: Gather ASA Facts
+#      cisco.asa.asa_facts:
+#      register: facts
+#  #  - debug: var=vars
+#    - debug: var=facts
+#
+#    - name: Show the ASA version
+#      cisco.asa.asa_command:
+#        commands:
+#        - show version

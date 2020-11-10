@@ -1,0 +1,8 @@
+---
+# Must match Python that NAPALM is installed into.
+#ansible_python_interpreter: "$(which python)"
+ansible_network_os: eos
+# Continue using 'network_cli' (NAPALM module itself will use eAPI)
+ansible_connection: network_cli
+ansible_user: ansible
+ansible_ssh_pass: automation

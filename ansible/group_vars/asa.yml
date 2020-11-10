@@ -1,0 +1,10 @@
+---
+# Must match Python that NAPALM is installed into.
+#ansible_python_interpreter: "$(which python)"
+ansible_network_os: cisco.asa.asa
+ansible_connection: network_cli
+#ansible_user: ansible
+#ansible_ssh_pass: automation
+ansible_become: true
+ansible_become_method: ansible.netcommon.enable
+#ansible_become_pass: automation

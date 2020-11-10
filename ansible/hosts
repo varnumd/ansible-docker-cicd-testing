@@ -1,0 +1,37 @@
+---
+all:
+  children:
+    eos:
+      hosts:
+        veos1:
+          ansible_host: 10.0.0.224
+        veos2:
+          ansible_host: 10.0.0.225
+        
+    ios:
+      hosts:
+        iosxe1:
+          ansible_host: 10.0.0.220
+        iosxe2:
+          ansible_host: 10.0.0.221
+        vios1:
+          ansible_host: 10.0.0.222
+        vios2:
+          ansible_host: 10.0.0.223
+          
+    asa:
+      hosts:
+        asav1:
+          ansible_host: 10.0.0.119
+
+    nxos:
+      hosts:
+        nxosv1:
+          ansible_host: 10.0.0.226
+        nxosv2:
+          ansible_host: 10.0.0.227
+
+    panos:
+      hosts:
+        panosv1:
+          ansible_host: 10.0.0.198
