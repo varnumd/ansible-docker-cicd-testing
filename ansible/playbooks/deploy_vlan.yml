@@ -7,5 +7,5 @@
     - name: EOS commands
       arista.eos.eos_config:
         lines:
-          - vlan 99
           - name Ansible-Test
+        parents: vlan 99
