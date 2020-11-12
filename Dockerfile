@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 
 # Variable Definition
+ENV DEBIAN_FRONTEND=noninteractive
 ENV ANSIBLE_VERSION "2.10.3"
 
 RUN  apt-get -y update && \
