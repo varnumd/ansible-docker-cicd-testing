@@ -17,11 +17,7 @@ pipeline {
             }
 
         stage('Deploy') {
-            triggers {
-                githubPullRequest {
-                    triggerPhrase('special trigger phrase')
-                }
-            }
+
             steps {
                 sh 'docker run -t overlaid/ansible ansible-playbook playbooks/deploy_vlan.yml -l veos1'
             }
