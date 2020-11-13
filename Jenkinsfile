@@ -17,6 +17,9 @@ pipeline {
             }
 
         stage('Deploy') {
+            when {
+                changelog 'approved'
+            }
             steps {
                 sh 'docker run -t overlaid/ansible ansible-playbook playbooks/deploy_vlan.yml -l veos1'
             }

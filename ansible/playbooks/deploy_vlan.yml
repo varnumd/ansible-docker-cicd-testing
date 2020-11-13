@@ -8,4 +8,4 @@
       arista.eos.eos_config:
         lines:
           - name Ansible-Test
-        parents: vlan 98
+        parents: vlan 97
